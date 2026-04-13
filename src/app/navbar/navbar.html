@@ -1,6 +1,6 @@
 <nav>
     <div class="logo"><a routerLink="/" (click)="setSelectedPageToLandPage()">M.A. Almagro</a></div>
-    <div class="nav-links">
+    <div id="nav-links" class="nav-links">
         <a routerLink="/" [class.active]="selectedPage === 'landPage'" (click)="setSelectedPageToLandPage()">Home</a>
         <a routerLink="angular" [class.active]="selectedPage === 'angular'" (click)="setSelectedPageToAngular()">Angular</a>
         <a routerLink="redes" [class.active]="selectedPage === 'redes'" (click)="setSelectedPageToRedes()">Redes & Sistemas</a>
@@ -8,22 +8,25 @@
             <a>CVs ▾</a>
             <div class="dropdown_menu">
                 <a routerLink="cv" (click)="setSelectedCvToAngularEs()">
-                    <span>ES</span>
+                    <span class="es">ES</span>
                     CV Angular - Español
                 </a>
                 <a routerLink="cv" (click)="setSelectedCvToRedesEs()">
-                    <span>ES</span>
+                    <span class="es">ES</span>
                     CV Redes - Español
                 </a>
                 <a routerLink="cv" (click)="setSelectedCvToAngularEn()">
-                    <span>EN</span>
+                    <span class="en">EN</span>
                     CV Angular - English
                 </a>
                 <a routerLink="cv" (click)="setSelectedCvToRedesEn()">
-                    <span>EN</span>
+                    <span class="en">EN</span>
                     CV Networks - English
                 </a>
             </div>
         </div>
     </div>
+    <button class="hamburger" (click)="hamburgerActiveToggle()">
+        ☰
+    </button>
 </nav>
