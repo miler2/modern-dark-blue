@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from "@angular/router";
-import { CvService } from '../pages/cv/cv-service';
+import { Routing } from './routing';
 
 @Component({
   selector: 'app-navbar',
@@ -9,23 +9,25 @@ import { CvService } from '../pages/cv/cv-service';
   styleUrl: './navbar.scss',
 })
 export class Navbar {
-  selectedPage: 'landPage' | 'angular' | 'redes' = 'landPage';
-
-  constructor(private cv: CvService) {}
+  constructor(private routing: Routing) {}
 
   setSelectedPageToLandPage() {
-    this.selectedPage = 'landPage';
+    this.routing.setSelectedPageToLandPage();
     this.hamburgerClose();
   }
 
   setSelectedPageToAngular() {
-    this.selectedPage = 'angular';
+    this.routing.setSelectedPageToAngular();
     this.hamburgerClose();
   }
 
   setSelectedPageToRedes() {
-    this.selectedPage = 'redes';
+    this.routing.setSelectedPageToRedes();
     this.hamburgerClose();
+  }
+
+  get selectedPage(){
+    return this.routing.selectedPage;
   }
 
 
@@ -41,22 +43,22 @@ export class Navbar {
 
   // CV DROPDOWN SELECTION
   setSelectedCvToAngularEs() {
-    this.cv.setSelectedCvToAngularEs();
+    this.routing.setSelectedCvToAngularEs();
     this.hamburgerClose();
   }
 
   setSelectedCvToRedesEs() {
-    this.cv.setSelectedCvToRedesEs();
+    this.routing.setSelectedCvToRedesEs();
     this.hamburgerClose();
   }
 
   setSelectedCvToAngularEn() {
-    this.cv.setSelectedCvToAngularEn();
+    this.routing.setSelectedCvToAngularEn();
     this.hamburgerClose();
   }
 
   setSelectedCvToRedesEn() {
-    this.cv.setSelectedCvToRedesEn();
+    this.routing.setSelectedCvToRedesEn();
     this.hamburgerClose();
   }
 }

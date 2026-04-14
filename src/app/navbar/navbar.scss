@@ -9,6 +9,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 500;
 }
 
 .logo {
@@ -76,6 +77,16 @@ span {
     }
 }
 
+a.active {
+    color: var(--text);
+    background: var(--bg3);
+}
+
+a:hover {
+    color: var(--text);
+    background: var(--bg3);
+}
+
 @media (min-width: 768px) {
     .nav-links {
         display: flex;
@@ -85,16 +96,6 @@ span {
         .dropdown {
             position: relative;
         }
-    }
-
-    a.active {
-        color: var(--text);
-        background: var(--bg3);
-    }
-
-    a:hover {
-        color: var(--text);
-        background: var(--bg3);
     }
 }
 
@@ -125,16 +126,6 @@ span {
         z-index: 200;
         width: 100%;
         text-align: center;
-
-        a.active {
-            color: var(--text);
-            background: var(--bg3);
-        }
-
-        a:hover {
-            color: var(--text);
-            background: var(--bg3);
-        }
     }
 
     .nav-links.open {

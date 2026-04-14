@@ -1,3 +1,218 @@
-p {
-    color: white;
+.landpage_intro {
+    min-height: calc(100vh - 180px);
+    padding: 4rem 2rem;
+    overflow: hidden;
+
+    .work_status {
+        display: inline-flex;
+        align-items: center;
+        gap: .5rem;
+        background: rgba(59,130,246,.1);
+        border: 1px solid rgba(59,130,246,.25);
+        color: #93c5fd;
+        padding: .3rem .9rem;
+        border-radius: 100px;
+        font-size: .8rem;
+        font-weight: 600;
+        letter-spacing: .5px;
+
+        span {
+            width: 7px;
+            height: 7px;
+            background: #3b82f6;
+            border-radius: 50%;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 420px;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    @media (max-width: 768px) {
+        .landpage_intro {
+            height: fit-content;
+        }
+
+        .landpage_intro_info {
+            display: none;
+        }
+
+        .container {
+            display: block;
+        }
+    }
+
+    .buttons_container {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    p {
+        font-size: 1.15rem;
+        max-width: 520px;
+        margin-bottom: 2rem;
+        line-height: 1.7;
+    }
+
+
+
+
+
+    .landpage_intro_info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+
+        .ma_icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--grad);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: .2rem;
+        }
+
+        .subtitle {
+            font-size: .85rem;
+            color: var(--accent2);
+            margin-bottom: 1.4rem;
+        }
+    }
+
+    .info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 1.4rem;
+
+        div {
+            background: var(--bg3);
+            border-radius: 10px;
+            padding: .9rem;
+            text-align: center;
+            
+            h1 {
+                font-size: 1.6rem;
+                font-weight: 800;
+                background: var(--grad);
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                line-height: 1;
+                margin: 0;
+                padding: 0;
+            }
+
+            p {
+                font-size: .73rem;
+                margin-top: .2rem;
+            }
+        }
+    }
+}
+
+.landpage_intro::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle,rgba(59,130,246,.08) 0%,transparent 70%);
+    pointer-events: none;
+}
+
+.landpage_intro::after {
+    content: '';
+    position: absolute;
+    bottom: -200px;
+    left: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle,rgba(6,182,212,.06) 0%,transparent 70%);
+    pointer-events: none;
+}
+
+
+
+
+// Especializacion
+.especializacion {
+    p {
+        color: var(--muted);
+        max-width: 580px;
+        margin-bottom: 3rem;
+        line-height: 1.7;
+    }
+
+    .title {
+        font-size: .75rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        color: var(--accent);
+        text-transform: uppercase;
+        margin-bottom: .75rem;
+    }
+
+    .box {
+        padding-bottom: 70px;
+        cursor: pointer;
+
+        .icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 1.4rem;
+        }
+
+        .icon.red {
+            background: rgba(221,0,49,.1);
+            border: 1px solid rgba(221,0,49,.2);
+        }
+
+        .icon.teal {
+            background: rgba(6,182,212,.1);
+            border: 1px solid rgba(6,182,212,.2);
+        }
+
+        .ver_perfil {
+            position: absolute;
+            bottom: 20px;
+            margin-top: 1.5rem;
+            font-size: .87rem;
+            font-weight: 600;
+            color: var(--accent);
+            transition: var(--transition);
+        }
+    }
+
+    .box:hover {
+        border-color: rgba(59,130,246,.3);
+        transform: translateY(-3px);
+    }
 }

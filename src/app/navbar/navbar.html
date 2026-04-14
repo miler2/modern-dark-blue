@@ -1,5 +1,5 @@
 <nav>
-    <div class="logo"><a routerLink="/" (click)="setSelectedPageToLandPage()">M.A. Almagro</a></div>
+    <a routerLink="/" (click)="setSelectedPageToLandPage()" class="logo">M.A. Almagro</a>
     <div id="nav-links" class="nav-links">
         <a routerLink="/" [class.active]="selectedPage === 'landPage'" (click)="setSelectedPageToLandPage()">Home</a>
         <a routerLink="angular" [class.active]="selectedPage === 'angular'" (click)="setSelectedPageToAngular()">Angular</a>
