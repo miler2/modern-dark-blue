@@ -5,7 +5,7 @@
         <a routerLink="angular" [class.active]="selectedPage === 'angular'" (click)="setSelectedPageToAngular()">Angular</a>
         <a routerLink="redes" [class.active]="selectedPage === 'redes'" (click)="setSelectedPageToRedes()">Redes & Sistemas</a>
         <div class="dropdown">
-            <a>CVs ▾</a>
+            <a [class.active]="selectedPage === 'cv'">CVs ▾</a>
             <div class="dropdown_menu">
                 <a routerLink="cv" (click)="setSelectedCvToAngularEs()">
                     <span class="es">ES</span>

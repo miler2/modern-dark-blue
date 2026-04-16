@@ -77,15 +77,18 @@ span {
     }
 }
 
-a.active {
-    color: var(--text);
-    background: var(--bg3);
+.nav-links {
+    a.active {
+        color: var(--text);
+        background: var(--bg3);
+    }
+
+    a:hover {
+        color: var(--text);
+        background: var(--bg3);
+    }
 }
 
-a:hover {
-    color: var(--text);
-    background: var(--bg3);
-}
 
 @media (min-width: 768px) {
     .nav-links {

@@ -11,6 +11,10 @@ import { Routing } from './routing';
 export class Navbar {
   constructor(private routing: Routing) {}
 
+  ngOnInit(){
+    this.routing.currentUrl;
+  }
+
   setSelectedPageToLandPage() {
     this.routing.setSelectedPageToLandPage();
     this.hamburgerClose();
@@ -44,6 +48,7 @@ export class Navbar {
   // CV DROPDOWN SELECTION
   setSelectedCvToAngularEs() {
     this.routing.setSelectedCvToAngularEs();
+    this.routing.setSelectedPageToCv();
     this.hamburgerClose();
   }
 

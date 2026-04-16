@@ -5,9 +5,23 @@ import { CvService } from '../pages/cv/cv-service';
   providedIn: 'root',
 })
 export class Routing {
-  selectedPage: 'landPage' | 'angular' | 'redes' = 'landPage';
+  selectedPage?: string;
 
   constructor(private cv: CvService) {}
+
+  get currentUrl(){
+    this.selectedPage = window.location.pathname;
+    if (this.selectedPage === '/angular') {
+      this.setSelectedPageToAngular();
+    } else if (this.selectedPage === '/redes') {
+      this.setSelectedPageToRedes();
+    } else if (this.selectedPage === '/cv') {
+      this.setSelectedPageToCv();
+    } else {
+      this.setSelectedPageToLandPage();
+    }
+    return this.selectedPage;
+  }
 
   setSelectedPageToLandPage() {
     this.selectedPage = 'landPage';
@@ -19,6 +33,10 @@ export class Routing {
 
   setSelectedPageToRedes() {
     this.selectedPage = 'redes';
+  }
+
+  setSelectedPageToCv() {
+    this.selectedPage = 'cv';
   }
 
 

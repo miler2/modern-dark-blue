@@ -7,7 +7,6 @@
     --accent2: #06b6d4;
     --text: #e8edf5;
     --muted: #8892a4;
-    --border: #1e2d47;
     --card: #0d1526;
     --card2: #111d35;
     --grad: linear-gradient(135deg,#3b82f6,#06b6d4);
@@ -63,7 +62,8 @@ h2 {
     font-weight: 800;
     line-height: 1.15;
     letter-spacing: -.5px;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
+    padding: 0;
 
     span {
         background: var(--grad);
@@ -71,6 +71,17 @@ h2 {
         -webkit-text-fill-color: transparent;
         background-clip: text;
     }
+}
+
+h3 {
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: .75rem;
+    margin: 0;
+    padding: 0;
 }
 
 p {
@@ -165,6 +176,12 @@ p {
 
 
 // BUTTONS
+.buttons_container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 .btn_primary {
     background: var(--grad);
     color: #fff;
