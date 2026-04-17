@@ -2,9 +2,11 @@
     .intro_text {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 200px;
 
         button {
             height: fit-content;
+            min-width: 180px;
         }
 
         h1 > span {
@@ -13,15 +15,23 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 1rem;
+        }
     }
 }
 
 section > div {
     max-width: 1000px;
-    width: 60%;
 
     h1 {
         margin-top: 10px;
+    }
+
+    @media (min-width: 768px) {
+        width: 60%;
     }
 }
 
@@ -30,8 +40,6 @@ section > div {
 }
 
 .trayectoria {
-    margin-top: 200px;
-
     .container {
         display: flex;
         flex-direction: column;
@@ -103,11 +111,16 @@ section > div {
             background: var(--grad);
         }
     }
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fill,minmax(140px,1fr));
     gap: 1rem;
 
     .box {
@@ -128,6 +141,10 @@ section > div {
             border-radius: 50%;
             flex-shrink: 0;
         }
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 

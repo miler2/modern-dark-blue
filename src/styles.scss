@@ -128,6 +128,14 @@ p {
     background: var(--red_grad);
 }
 
+.box_highlight::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%,rgba(59,130,246,.08),transparent 60%);
+    z-index: 0;
+}
+
 
 // PILLS
 .pills {
@@ -212,6 +220,7 @@ p {
     cursor: pointer;
     transition: var(--transition);
     font-family: inherit;
+    z-index: 1;
 }
 
 .btn_secondary:hover {
