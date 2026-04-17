@@ -219,3 +219,50 @@ p {
     color: var(--accent);
     background: rgba(59,130,246,.06)
 }
+
+
+.work_status {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: rgba(59,130,246,.1);
+    border: 1px solid rgba(59,130,246,.25);
+    color: #93c5fd;
+    padding: .3rem .9rem;
+    border-radius: 100px;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .5px;
+    overflow: hidden;
+
+    span {
+        width: 7px;
+        height: 7px;
+        background: #3b82f6;
+        border-radius: 50%;
+        display: inline-block;
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+}
+
+.hablamos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    transform: none;
+    background: linear-gradient(180deg,transparent,rgba(59,130,246,.04));
+    padding: 0 20px;
+    padding-bottom: 60px;
+    text-align: center;
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        margin-bottom: 35px;
+    }
+}
