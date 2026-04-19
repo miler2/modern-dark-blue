@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Footer } from "../../footer/footer";
-import { CvService } from '../cv/cv-service';
 import { Routing } from '../../navbar/routing';
 import { Router } from '@angular/router';
 
@@ -11,14 +10,14 @@ import { Router } from '@angular/router';
   styleUrl: './redes-sistemas.scss',
 })
 export class RedesSistemas {
-  constructor(private cv: CvService, private routing: Routing, private router: Router){}
+  constructor(private routing: Routing, private router: Router){}
   
   setSelectedCvToRedesEs(){
-    this.cv.setSelectedCvToRedesEs();
+    this.router.navigate(['cv_english.pdf']);
   }
 
   setSelectedCvToRedesEn(){
-    this.cv.setSelectedCvToRedesEn();
+    this.router.navigate(['cv_english.pdf']);
   }
 
   setSelectedPageToAngular() {

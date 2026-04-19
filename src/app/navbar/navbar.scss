@@ -30,6 +30,11 @@ a {
     transition: var(--transition);
     font-family: inherit;
     white-space: nowrap;
+    display: flex;
+
+    a {
+        padding: 0;
+    }
 }
 
 .dropdown_menu {

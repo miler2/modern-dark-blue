@@ -43,27 +43,4 @@ export class Navbar {
   hamburgerClose() { 
     document.getElementById('nav-links')?.classList.remove('open');
   }
-
-
-  // CV DROPDOWN SELECTION
-  setSelectedCvToAngularEs() {
-    this.routing.setSelectedCvToAngularEs();
-    this.routing.setSelectedPageToCv();
-    this.hamburgerClose();
-  }
-
-  setSelectedCvToRedesEs() {
-    this.routing.setSelectedCvToRedesEs();
-    this.hamburgerClose();
-  }
-
-  setSelectedCvToAngularEn() {
-    this.routing.setSelectedCvToAngularEn();
-    this.hamburgerClose();
-  }
-
-  setSelectedCvToRedesEn() {
-    this.routing.setSelectedCvToRedesEn();
-    this.hamburgerClose();
-  }
 }

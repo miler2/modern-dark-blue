@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Footer } from "../../footer/footer";
-import { CvService } from '../cv/cv-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-angular',
@@ -9,13 +9,13 @@ import { CvService } from '../cv/cv-service';
   styleUrl: './angular.scss',
 })
 export class Angular {
-  constructor(private cv: CvService){}
+  constructor(private router: Router){}
 
-  setSelectedCvToAngularEs() {
-    this.cv.setSelectedCvToAngularEs();
+  goToCvAngularEs(){
+    this.router.navigate(['cv_angular_espanol.pdf']);
   }
 
-  setSelectedCvToAngularEn() {
-    this.cv.setSelectedCvToAngularEn();
+  goToCvAngularEn(){
+    this.router.navigate(['cv_angular_english.pdf']);
   }
 }

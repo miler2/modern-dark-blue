@@ -56,7 +56,7 @@
         <h2>Dos áreas, <span>un profesional</span></h2>
         <p>Combino desarrollo frontend avanzado con Angular y un perfil técnico robusto en redes, sistemas e infraestructura. Un candidato versátil para equipos técnicos exigentes.</p>
         <div class="display_flex">
-            <div class="box red_top" (click)="goToAngularPage()" routerLink="angular">
+            <a class="box red_top" routerLink="angular" (click)="activeNavbarAngular()">
                 <div class="icon red">🅰</div>
                 <h3>Angular Developer</h3>
                 <p>Desarrollo de aplicaciones web escalables con Angular, TypeScript y ecosistema frontend moderno. Experiencia en proyectos empresariales con arquitectura limpia y buenas prácticas.</p>
@@ -69,8 +69,8 @@
                     <span>Material UI</span>
                 </div>
                 <div class="ver_perfil">Ver perfil Angular →</div>
-            </div>
-            <div class="box blue_top" (click)="goToRedesPage()" routerLink="redes">
+            </a>
+            <a class="box blue_top" routerLink="redes" (click)="activeNavbarRedes()">
                 <div class="icon teal">🌐</div>
                 <h3>Redes &amp; Sistemas</h3>
                 <p>Conocimientos sólidos en administración de sistemas Linux/Windows, redes TCP/IP, infraestructura de servidores y hardware. Base técnica real que distingue mi perfil como desarrollador.</p>
@@ -83,7 +83,7 @@
                     <span>VLANs</span>
                 </div>
                 <div class="ver_perfil">Ver perfil técnico →</div>
-            </div>
+            </a>
         </div>
     </div>
 </section>
@@ -143,22 +143,22 @@
             <h2><span>Acceso rápido a mis CVs</span></h2>
             <p>Disponibles en español e inglés para los dos perfiles.</p>
             <div class="container box_highlight">
-                <div class="box box_highlight" (click)="goToAngularEs()">
+                <a class="box box_highlight" href="cv_angular_espanol.pdf" target="_blank">
                     <span>📄 CV Angular <strong>ES</strong></span>
-                    <span>🇪🇸 Descargar</span>
-                </div>
-                <div class="box box_highlight" (click)="goToAngularEn()">
+                    <span>🇪🇸</span>
+                </a>
+                <a class="box box_highlight" href="cv_angular_english.pdf" target="_blank">
                     <span>📄 CV Angular <strong>EN</strong></span>
-                    <span>🇬🇧 Download</span>
-                </div>
-                <div class="box box_highlight" (click)="goToRedesEs()">
+                    <span>🇬🇧</span>
+                </a>
+                <a class="box box_highlight" href="cv_espanol.pdf" target="_blank">
                     <span>📄 CV Redes <strong>ES</strong></span>
-                    <span>🇪🇸 Descargar</span>
-                </div>
-                <div class="box box_highlight" (click)="goToRedesEn()">
+                    <span>🇪🇸</span>
+                </a>
+                <a class="box box_highlight" href="cv_english.pdf" target="_blank">
                     <span>📄 CV Networks <strong>EN</strong></span>
-                    <span>🇬🇧 Download</span>
-                </div>
+                    <span>🇬🇧</span>
+                </a>
             </div>
         </div>
     </div>

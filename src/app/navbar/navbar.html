@@ -7,19 +7,19 @@
         <div class="dropdown">
             <a [class.active]="selectedPage === 'cv'">CVs ▾</a>
             <div class="dropdown_menu">
-                <a (click)="setSelectedCvToAngularEs()">
+                <a href="cv_angular_espanol.pdf" target="_blank" (click)="hamburgerClose()">
                     <span class="es">ES</span>
                     CV Angular - Español
                 </a>
-                <a (click)="setSelectedCvToRedesEs()">
+                <a href="cv_espanol.pdf" target="_blank" (click)="hamburgerClose()">
                     <span class="es">ES</span>
                     CV Redes - Español
                 </a>
-                <a (click)="setSelectedCvToAngularEn()">
+                <a href="cv_angular_english.pdf" target="_blank" (click)="hamburgerClose()">
                     <span class="en">EN</span>
                     CV Angular - English
                 </a>
-                <a (click)="setSelectedCvToRedesEn()">
+                <a href="cv_english.pdf" target="_blank" (click)="hamburgerClose()">
                     <span class="en">EN</span>
                     CV Networks - English
                 </a>
