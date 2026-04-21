@@ -1,59 +1,39 @@
-# ModernDarkBlue
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.5.
+# This website is my personal CV's exposé
 
-## Development server
+# Full documentation for this project here:
 
-To start a local development server, run:
+This project is on development. If you want general documentation for angular, or for how to set up an angular instance you can go to this link:
 
-```bash
-ng serve
+https://github.com/miler2/documentation/blob/main/angular.md
+
+
+## Useful commands for this project
+This command serves the website locally for all the devices in the local network
+```
+ng serve --host 0.0.0.0
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+This command builds the website into a single folder so that github can load the website with javascript files.
+```
+ng b
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+This command has a bunch of default values to keep in mind, like base-href, and others. With this build, and settings, it just works with ng b, and the next commands below.
 
-```bash
-ng generate --help
+## angular-cli-ghpages
+This is so that I can directly upload my compiled code from the dist/browser folder into the gh-pages branch of my repo and automatically build the page in github.
+
+To set this up we first need to **install angular-cli-ghpages** to angular:
+
+```
+ng add angular-cli-ghpages
 ```
 
-## Building
+This command uploads to my github branch the files with the website. I want to output only the folder "browser" inside the dist folder where we built the website in the command before.
 
-To build the project run:
-
-```bash
-ng build
+We add the --dir to tell this where to save the files, and we give it the --cname, to let it know what url it will use.
 ```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
+npx angular-cli-ghpages --dir=dist/browser --cname=miler2.com
 ```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
