@@ -1,25 +1,25 @@
 <nav>
-    <a routerLink="/" (click)="setSelectedPageToLandPage()" class="logo">M.A. Almagro</a>
+    <a href="/" (click)="setSelectedPageToLandPage()" class="logo">M.A. Almagro</a>
     <div id="nav-links" class="nav-links">
-        <a routerLink="/" [class.active]="selectedPage === 'landPage'" (click)="setSelectedPageToLandPage()">Home</a>
-        <a routerLink="angular" [class.active]="selectedPage === 'angular'" (click)="setSelectedPageToAngular()">Angular</a>
-        <a routerLink="redes" [class.active]="selectedPage === 'redes'" (click)="setSelectedPageToRedes()">Redes & Sistemas</a>
+        <a href="/" [class.active]="selectedPage === 'landPage'" (click)="setSelectedPageToLandPage()">Home</a>
+        <a href="angular" [class.active]="selectedPage === 'angular'" (click)="setSelectedPageToAngular()">Angular</a>
+        <a href="redes" [class.active]="selectedPage === 'redes'" (click)="setSelectedPageToRedes()">Redes & Sistemas</a>
         <div class="dropdown">
             <a [class.active]="selectedPage === 'cv'">CVs ▾</a>
             <div class="dropdown_menu">
-                <a href="cv_angular_espanol.pdf" target="_blank" (click)="hamburgerClose()">
+                <a href="/cv_angular_espanol.pdf" target="_blank" (click)="hamburgerClose()">
                     <span class="es">ES</span>
                     CV Angular - Español
                 </a>
-                <a href="cv_espanol.pdf" target="_blank" (click)="hamburgerClose()">
+                <a href="/cv_espanol.pdf" target="_blank" (click)="hamburgerClose()">
                     <span class="es">ES</span>
                     CV Redes - Español
                 </a>
-                <a href="cv_angular_english.pdf" target="_blank" (click)="hamburgerClose()">
+                <a href="/cv_angular_english.pdf" target="_blank" (click)="hamburgerClose()">
                     <span class="en">EN</span>
                     CV Angular - English
                 </a>
-                <a href="cv_english.pdf" target="_blank" (click)="hamburgerClose()">
+                <a href="/cv_english.pdf" target="_blank" (click)="hamburgerClose()">
                     <span class="en">EN</span>
                     CV Networks - English
                 </a>

@@ -34,13 +34,6 @@ footer {
             justify-content: space-between;
             gap: 6rem;
 
-            div {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                gap: 1rem;
-            }
-
             a {
                 transition: var(--transition);
             }
@@ -52,6 +45,13 @@ footer {
             @media (max-width: 768px){
                 margin-bottom: 30px;
             }
+        }
+
+        .display_column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
         }
 
         @media (min-width: 768px){
