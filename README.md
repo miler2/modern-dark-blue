@@ -1,39 +1,10 @@
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
+# WELCOME!
+This github repository is for my portfolio's website, where you can see my 2 different tech profiles:
 
-# This website is my personal CV's exposé
+- Fullstack Angular Developer
+- Networks & Systems Administrator
 
-# Full documentation for this project here:
+This website was created with help of claude to style the website, and then manually done from zero to change it the way I wanted, and with future expantion in mind.
 
-This project is on development. If you want general documentation for angular, or for how to set up an angular instance you can go to this link:
-
+## How to install and start to use Angular to use this project
 https://github.com/miler2/documentation/blob/main/angular.md
-
-
-## Useful commands for this project
-This command serves the website locally for all the devices in the local network
-```
-ng serve --host 0.0.0.0
-```
-
-This command builds the website into a single folder so that github can load the website with javascript files.
-```
-ng b
-```
-
-This command has a bunch of default values to keep in mind, like base-href, and others. With this build, and settings, it just works with ng b, and the next commands below.
-
-## angular-cli-ghpages
-This is so that I can directly upload my compiled code from the dist/browser folder into the gh-pages branch of my repo and automatically build the page in github.
-
-To set this up we first need to **install angular-cli-ghpages** to angular:
-
-```
-ng add angular-cli-ghpages
-```
-
-This command uploads to my github branch the files with the website. I want to output only the folder "browser" inside the dist folder where we built the website in the command before.
-
-We add the --dir to tell this where to save the files, and we give it the --cname, to let it know what url it will use.
-```
-npx angular-cli-ghpages --dir=dist/browser --cname=miler2.com
-```
