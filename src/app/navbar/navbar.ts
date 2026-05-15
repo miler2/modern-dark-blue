@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from "@angular/router";
 import { Routing } from './routing';
 
@@ -8,7 +8,7 @@ import { Routing } from './routing';
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
-export class Navbar {
+export class Navbar implements OnInit {
   constructor(private routing: Routing) {}
 
   ngOnInit(){
