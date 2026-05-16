@@ -1,25 +1,25 @@
 <nav>
-    <a routerLink="/" (click)="setSelectedPageToLandPage()" class="logo">M.A. Almagro</a>
+    <a class="logo" routerLink="/" routerLinkActive="active" draggable="false">M.A. Almagro</a>
     <div id="nav-links" class="nav-links">
-        <a routerLink="/" [class.active]="selectedPage === 'landPage'" (click)="setSelectedPageToLandPage()">Home</a>
-        <a routerLink="angular" [class.active]="selectedPage === 'angular'" (click)="setSelectedPageToAngular()">Angular</a>
-        <a routerLink="redes" [class.active]="selectedPage === 'redes'" (click)="setSelectedPageToRedes()">Redes & Sistemas</a>
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" draggable="false">Home</a>
+        <a routerLink="angular" routerLinkActive="active" draggable="false">Angular</a>
+        <a routerLink="redes" routerLinkActive="active" draggable="false">Redes & Sistemas</a>
         <div class="dropdown">
-            <a [class.active]="selectedPage === 'cv'">CVs ▾</a>
+            <a>CVs ▾</a>
             <div class="dropdown_menu">
-                <a routerLink="/cv_angular_espanol.pdf" target="_blank" (click)="hamburgerClose()">
+                <a routerLink="/cv_angular_espanol.pdf" target="_blank" (click)="hamburgerClose()" draggable="false">
                     <span class="es">ES</span>
                     CV Angular - Español
                 </a>
-                <a routerLink="/cv_redes_espanol.pdf" target="_blank" (click)="hamburgerClose()">
+                <a routerLink="/cv_redes_espanol.pdf" target="_blank" (click)="hamburgerClose()" draggable="false">
                     <span class="es">ES</span>
                     CV Redes - Español
                 </a>
-                <a routerLink="/cv_angular_english.pdf" target="_blank" (click)="hamburgerClose()">
+                <a routerLink="/cv_angular_english.pdf" target="_blank" (click)="hamburgerClose()" draggable="false">
                     <span class="en">EN</span>
                     CV Angular - English
                 </a>
-                <a routerLink="/cv_redes_english.pdf" target="_blank" (click)="hamburgerClose()">
+                <a routerLink="/cv_redes_english.pdf" target="_blank" (click)="hamburgerClose()" draggable="false">
                     <span class="en">EN</span>
                     CV Networks - English
                 </a>

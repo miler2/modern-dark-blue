@@ -1,18 +1,11 @@
 import { Component } from '@angular/core';
 import { Footer } from "../../footer/footer";
-import { RouterLink } from '@angular/router';
-import { Routing } from '../../navbar/routing';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-redes-sistemas',
-  imports: [Footer, RouterLink],
+  imports: [Footer, RouterLink, RouterLinkActive],
   templateUrl: './redes-sistemas.html',
   styleUrl: './redes-sistemas.scss',
 })
-export class RedesSistemas {
-  constructor(private routing: Routing) {}
-
-  setSelectedPageToAngular() {
-    this.routing.setSelectedPageToAngular();
-  }
-}
+export class RedesSistemas {}

@@ -1,41 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterLink } from "@angular/router";
-import { Routing } from './routing';
+import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from "@angular/router";
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
-export class Navbar implements OnInit {
-  constructor(private routing: Routing) {}
-
-  ngOnInit(){
-    this.routing.currentUrl;
-  }
-
-  setSelectedPageToLandPage() {
-    this.routing.setSelectedPageToLandPage();
-    this.hamburgerClose();
-  }
-
-  setSelectedPageToAngular() {
-    this.routing.setSelectedPageToAngular();
-    this.hamburgerClose();
-  }
-
-  setSelectedPageToRedes() {
-    this.routing.setSelectedPageToRedes();
-    this.hamburgerClose();
-  }
-
-  get selectedPage(){
-    return this.routing.selectedPage;
-  }
-
-
-  // HAMBURGER
+export class Navbar {
   hamburgerActiveToggle() {
     document.getElementById('nav-links')?.classList.toggle('open');
   }
