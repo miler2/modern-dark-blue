@@ -1,4 +1,4 @@
-.intro {
+.intro_section {
     .intro_text {
         display: flex;
         justify-content: space-between;
@@ -35,8 +35,8 @@ section > div {
     }
 }
 
-.work_status > span {
-    background: #dd0031;
+.intro_pill > span {
+    background: var(--angular);
 }
 
 .habilidades_grid {
@@ -105,8 +105,4 @@ section > div {
     @media (max-width: 768px) {
         grid-template-columns: repeat(2, 1fr);
     }
-}
-
-.ecosistema {
-    border: none;
 }
