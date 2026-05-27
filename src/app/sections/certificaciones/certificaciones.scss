@@ -1,3 +1,16 @@
+p {
+    margin-top: 10px;
+}
+
+a {
+    color: var(--text_main);
+}
+
+a:hover {
+    color: var(--text_muted);
+    transition: var(--transition);
+}
+
 .formacion > .box_container {
     grid-template-columns: repeat(2, 1fr);
 
